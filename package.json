@@ -1,0 +1,12 @@
+{
+  "name": "png_to_js",
+  "version": "1.0.0",
+  "repository": "git@github.com:selmertsx/png_to_js.git",
+  "author": "Morioka Shuhei <selmertsx@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^9.4.7",
+    "prettier": "^1.11.1",
+    "typescript": "^2.7.2"
+  }
+}
