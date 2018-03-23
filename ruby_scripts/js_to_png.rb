@@ -1,7 +1,7 @@
 require "zlib"
 require "pry"
 
-jsfile = File.open("jquery_min.js", "r")
+jsfile = File.open("sample.js", "r")
 code = jsfile.read
 width = code.length
 depth, color_type = 8, 2
