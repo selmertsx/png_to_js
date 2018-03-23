@@ -1,0 +1,3 @@
+ruby ruby_scripts/js_to_png.rb
+cwebp images/sample.png -o images/sample.webp
+dwebp images/sample.webp -o images/decompress.png
