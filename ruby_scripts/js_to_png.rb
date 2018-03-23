@@ -4,7 +4,7 @@ width, height = 100, 20
 depth, color_type = 8, 2
 
 # グラデーションのベタデータ
-line = (0...width).map {|x| [97, 0, 0] }
+line = (0...width).map {|x| [97, 97, 97] }
 raw_data = [line] * height
 
 # チャンクのバイト列生成関数
