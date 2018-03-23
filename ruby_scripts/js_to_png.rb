@@ -1,4 +1,3 @@
-# coding: UTF-8
 require "zlib"
 
 width, height = 100, 20
