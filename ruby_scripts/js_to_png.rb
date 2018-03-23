@@ -1,6 +1,6 @@
 require "zlib"
 
-width, height = 100, 20
+width, height = 100, 1
 depth, color_type = 8, 2
 
 # グラデーションのベタデータ
