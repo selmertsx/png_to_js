@@ -12,6 +12,7 @@
     "typescript": "^2.7.2"
   },
   "dependencies": {
-    "canvas": "^2.0.0-alpha.11"
+    "canvas": "^2.0.0-alpha.11",
+    "pngjs": "^3.3.2"
   }
 }
