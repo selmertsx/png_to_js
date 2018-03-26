@@ -13,7 +13,7 @@ depth, color_type = 8, 2
 array_code = code.scan(/.{1,16383}/)
 
 raw_data = array_code.map do |data|
-  data.rjust(width, "/").each_codepoint.to_a.map {|x| [x, x, x]}
+  data.ljust(width, "/").each_codepoint.to_a.map {|x| [x, x, x]}
 end
 
 # チャンクのバイト列生成関数
