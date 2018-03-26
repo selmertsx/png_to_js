@@ -1,17 +1,15 @@
 require "zlib"
 require "pry"
 
-jsfile = File.open("jquery_min.js", "r")
-code = jsfile.read
+jsfile = File.open("angular.min.js", "r")
+code = jsfile.read.gsub("\n", "")
 
 # cwebpの制限
 MAXIMUM_PIXEL_SIZE = 16383.0
 width = MAXIMUM_PIXEL_SIZE
 height = (code.length / MAXIMUM_PIXEL_SIZE).ceil
-depth, color_type = 8, 2
 
 array_code = code.scan(/.{1,16383}/)
-
 raw_data = array_code.map do |data|
   data.ljust(width, " ").each_codepoint.to_a
 end
