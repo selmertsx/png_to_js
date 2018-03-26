@@ -1,3 +1,4 @@
 ruby ruby_scripts/js_to_png.rb
 cwebp -z 9 -lossless images/sample.png -o images/sample.webp
 dwebp images/sample.webp -o images/decompress.png
+ruby ruby_scripts/check_pixels.rb

@@ -1,8 +1,8 @@
 require "zlib"
 require "pry"
 
-jsfile = File.open("angular.min.js", "r")
-code = jsfile.read.gsub("\n", "")
+jsfile = File.open("fixed_angular.min.js", "r")
+code = jsfile.read
 
 # cwebpの制限
 MAXIMUM_PIXEL_SIZE = 16383.0
