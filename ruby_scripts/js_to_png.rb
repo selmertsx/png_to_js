@@ -13,7 +13,7 @@ depth, color_type = 8, 2
 array_code = code.scan(/.{1,16383}/)
 
 raw_data = array_code.map do |data|
-  data.ljust(width, "/").each_codepoint.to_a.map {|x| [x, x, x]}
+  data.ljust(width, " ").each_codepoint.to_a
 end
 
 # チャンクのバイト列生成関数
@@ -23,7 +23,7 @@ end
 
 File.open("images/sample.png", "w", encoding: Encoding::ASCII_8BIT ) do |f|
   f << "\x89PNG\r\n\x1a\n"
-  f << chunk("IHDR", [width, height, 8, 2, 0, 0, 0].pack("NNCCCCC"))
+  f << chunk("IHDR", [width, height, 8, 0, 0, 0, 0].pack("NNCCCCC"))
   img_data = raw_data.map {|line| ([0] + line.flatten).pack("C*") }.join
   f << chunk("IDAT", Zlib::Deflate.deflate(img_data))
   f << chunk("IEND", "")
